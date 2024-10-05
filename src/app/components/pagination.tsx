@@ -11,6 +11,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage }) => {
     <div className="flex justify-center mt-4">
       <nav className="inline-flex">
         <Link
+          prefetch={false}
           href={
             currentPage > 1
               ? `/new/advice?id=${currentPage - 1}`
@@ -22,6 +23,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage }) => {
         </Link>
         {Array.from({ length: totalPages }, (_, index) => (
           <Link
+            prefetch={false}
             href={`/new/advice?id=${index + 1}`}
             key={index + 1}
             className={`px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 border border-gray-300 hover:bg-gray-300 ${
@@ -32,6 +34,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage }) => {
           </Link>
         ))}
         <Link
+          prefetch={false}
           href={
             currentPage < totalPages
               ? `?id=${currentPage + 1}`
