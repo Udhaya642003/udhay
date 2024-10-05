@@ -11,8 +11,8 @@ const Wrapper = async ({ id }: any) => {
   const postData = await fetchPostData(id);
   return (
     <>
-      <Pagination currentPage={id} />
       <CommentsList comments={postData} />
+      <Pagination currentPage={id} />
       <TodoList todos={firstThirty} />
     </>
   );
