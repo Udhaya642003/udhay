@@ -1,5 +1,5 @@
 "use server";
-const fetchPostData = async (id) => {
+const fetchPostData = async (id: any) => {
   const resp = await fetch(
     `https://jsonplaceholder.typicode.com/comments?postId=${id}`,
     {
