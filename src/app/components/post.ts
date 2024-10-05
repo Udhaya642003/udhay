@@ -3,7 +3,7 @@
 const fetchPostData = async (id: any) => {
   const delay = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
-  await delay(2000);
+  await delay(1000);
   const resp = await fetch(
     `https://jsonplaceholder.typicode.com/comments?postId=${id}`,
     {
@@ -12,6 +12,7 @@ const fetchPostData = async (id: any) => {
         "Content-Type": "application/json",
       },
       cache: "no-store",
+      next: { revalidate: 0 },
     }
   );
 
