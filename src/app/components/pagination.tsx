@@ -1,4 +1,4 @@
-"use client";
+"use server";
 import React from "react";
 import Link from "next/link";
 interface PaginationProps {
@@ -22,7 +22,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage }) => {
         </Link>
         {Array.from({ length: totalPages }, (_, index) => (
           <Link
-            href={`new/advice?id=${index + 1}`}
+            href={`/new/advice?id=${index + 1}`}
             key={index + 1}
             className={`px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 border border-gray-300 hover:bg-gray-300 ${
               currentPage === index + 1 ? "bg-blue-500 text-white" : ""
