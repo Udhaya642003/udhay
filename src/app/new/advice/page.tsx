@@ -6,7 +6,9 @@ import Loader from "./loading";
 interface SearchParams {
   [key: string]: string | string[] | undefined;
 }
-const Page: NextPage<{ searchParams: SearchParams }> = async({ searchParams }) => {
+const Page: NextPage<{ searchParams: SearchParams }> = async ({
+  searchParams,
+}) => {
   const paginationId = Array.isArray(searchParams.id)
     ? searchParams.id[0]
     : searchParams.id || "1";
