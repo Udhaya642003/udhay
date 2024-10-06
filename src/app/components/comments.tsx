@@ -11,7 +11,7 @@ interface CommentsListProps {
   comments: Comment[];
 }
 
-const CommentsList: React.FC<CommentsListProps> = ({ comments }) => {
+const CommentsList: React.FC<CommentsListProps> =async ({ comments }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

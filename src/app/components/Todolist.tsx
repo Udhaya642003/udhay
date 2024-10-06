@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoList = ({
+const TodoList = async ({
   todos,
 }: {
   todos: Array<{ id: number; title: string; completed: boolean }>;
